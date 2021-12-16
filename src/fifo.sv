@@ -35,7 +35,7 @@ task automatic pop_generate();
 en_pop = $urandom_range(0,1);
 dt.pop =  en_pop;
 
-if(en_push == 1'b1)begin
+if(en_pop == 1'b1)begin
 	if @(posedge dt.wrclk)begin
 		
 	//poner if para hacer pop
@@ -43,7 +43,15 @@ if(en_push == 1'b1)begin
 		//return(1);
 	end
 end
+////////////////////////////////////
+task automatic Push(input push_t push, output logic full);
 
+	ramdom = $urandom
+	dt.push = {push};
+	dt.data_in = random
+	full = dt.full	
+
+/////////////////////////////////
 
 // task de overflow
 //
