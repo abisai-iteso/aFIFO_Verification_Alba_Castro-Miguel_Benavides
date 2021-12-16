@@ -2,7 +2,7 @@
 
 class fifo_test;
 
-logic signed [31:0] q_a[$];
+data_t iq_a[$];
 //
 virtual inFIFO dt;//interface
 
@@ -20,10 +20,10 @@ dt.push = en_push;
 
 if(en_push == 1'b1)begin
 	if @(posedge dt.wrclk)begin
-
+  //poner if de size para hacer push
 		dt.data_in    = var_a;
 		q_a.push_front(var_a);
-      		return(1);
+      		//return(1);
  end
 end 
 
@@ -38,10 +38,19 @@ dt.pop =  en_pop;
 if(en_push == 1'b1)begin
 	if @(posedge dt.wrclk)begin
 		
+	//poner if para hacer pop
 		q_a.pop_back();
-		return(1);
+		//return(1);
 	end
 end
+
+
+// task de overflow
+//
+// task de underflow
+
+
+
 
 endtask
 
