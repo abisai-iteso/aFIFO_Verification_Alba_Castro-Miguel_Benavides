@@ -33,7 +33,7 @@ endtask
 
 task valores_t pop_generate(); 
 
-	pop_temp = NO_POP;
+	pop_temp = NOPOP;
 	dt.pop = pop_temp;
 
 	if(pop_temp) temp = q_a.pop_back();
