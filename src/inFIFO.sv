@@ -15,7 +15,7 @@ import fifo_pkg::*;
         logic full,
         logic empty
 
-modport fifoIn(
+modport fifo(
 
         //input wr_rst,
         //input rd_rst,

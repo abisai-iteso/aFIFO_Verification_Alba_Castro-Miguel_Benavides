@@ -22,7 +22,7 @@ include "fifo_test.svh";
 		.wr_rst(rst_wr),
 		.rd_clk(clk_rd),
 		.rd_rst(rst_rd),
-		.itf   (itf.fifoIn)
+		.itf   (itf)
 	);
 
 	/*wrapper_fifo dut(
